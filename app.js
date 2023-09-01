@@ -2,7 +2,7 @@ const express = require('express');
 
 
 const app = express();
-const PORT = process.env.PORT || 5800;
+const PORT = 5800;
 
 
 const axios = require('axios')
