@@ -77,7 +77,10 @@ async function sendErrorToDiscord(err,order,service = "CodInAfrica"){
   }
   const sendHook = await axios.post("url",obj)
 }
-  
+
+app.get('/test', (req,res)=>{
+  console.log("Hello");
+});
 
 app.post('/webhook', (req, res) => {
     let body = req.body;
@@ -87,6 +90,7 @@ app.post('/webhook', (req, res) => {
     
     res.sendStatus(200); // Send a response to acknowledge the webhook
 });
+
 
 // Set up the webhook and start the server
 app.listen(PORT,"0.0.0.0",() => {
