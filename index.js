@@ -51,8 +51,8 @@ async function sendOrderToCodInAfrica(order){
         "address": order.city,
         "items":[
             {
-                "name": product[1],
-                "code": product[2],
+                "name": product[0],
+                "code": product[1],
                 "quantity": parseInt(order.quantity),
                 "price": parseInt(order.price)
             }
