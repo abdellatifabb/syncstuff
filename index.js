@@ -36,8 +36,10 @@ const availableCountries = {
 
 async function sendOrderToCodInAfrica(order){
   try{
+    console.log("Hello im here")
     const country = order.url.split('-')[order.url.split('-').length-1]
     const product = JSON.parse(order.sku.replace(/'/g,`"`))
+    console.log("Hello im here1")
    
     let insertObj =  {
         "orderId":`omana-${country}-order-${order.id}-2023`,
@@ -59,7 +61,7 @@ async function sendOrderToCodInAfrica(order){
     }
     const resInsert = await axios.post(`https://api.codinafrica.com/api/orders/apicreate?key=${codInAfricaKeys.api_key}&secret=${codInAfricaKeys.api_secret}&source=Omana`,insertObj)
 
-    console.log("resInsert")
+    console.log(resInsert)
   }
   catch(err){
     sendErrorToDiscord(err,order)
