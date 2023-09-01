@@ -75,7 +75,7 @@ async function sendErrorToDiscord(err,order,service = "CodInAfrica"){
     "content": `Order: 🤷‍♂️ [${order.id}] (${service}) 🤷‍♂️ Failed 🆘. and the error was (${err.message})`,
     "avatar_url": ""
   }
-  const sendHook = await axios.post("url",obj)
+  const sendHook = await axios.post("https://discord.com/api/webhooks/1147220868213264495/KowXtBtfaT2z3MdvFlM8TyeDwP081MbZNU-LXB_mm37hWp0HSxlnRFKyJc1XOnLBj9nn",obj)
 }
 
 app.get('/test', (req,res)=>{
