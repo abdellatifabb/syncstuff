@@ -40,7 +40,7 @@ async function sendOrderToCodInAfrica(order){
     const country = order.url.split('-')[order.url.split('-').length-1]
     const product = JSON.parse(order.sku.replace(/'/g,`"`))
     console.log("Hello im here1")
-   
+    console.log(product)
     let insertObj =  {
         "orderId":`omana-${country}-order-${order.id}-2023`,
         "source":"Omana",
