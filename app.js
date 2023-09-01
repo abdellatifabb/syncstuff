@@ -13,8 +13,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 const codInAfricaKeys = {
-  "api_key":"",
-  "api_secret":""
+  "api_key":"qgwyfr40hyxnvgj57jd4kgcb3c9awlkbikcqmarj",
+  "api_secret":"cfpfnirquwyaqaqqhsoqdn4ilrjdh86pseaj25w9"
 }
 
 const availableCountries = {
